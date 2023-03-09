@@ -1,0 +1,26 @@
+
+body
+{
+    background-color: #FFFFCC.
+    margin: left 100px;
+    <h
+}
+h1
+{
+    front-size:48pt;
+    color: #f00;
+    front-style:italic;
+    border-bottom:solid thin black;
+}
+p
+{
+    front-size:12pt;
+    line-height:14pt;
+    font-family: Arial;
+    letter-spacing:0.2mm;
+    word-spacing:0.8mm;
+    color: bleu;
+}
+#one{
+   color:red;
+}

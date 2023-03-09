@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;/*tous le contenu et le padding et bordures*/
+    front-familly:"Robotto" now sherif;/* changer de police sur google fronts*/
+}
+
+/*****************HEDER******************/
+header{
+    background-color: darkgrey;/* couleur de fond*/
+    display: flex; /* type de déplacement boite block*/
+    flex-direction: row;/*sens de déplacement en ligne vers la droite*/
+    flex-flow: nowrap;/* sens déplacement non mise à la ligne*/
+    /*raccourci****************
+     flex-flow: row nowrap;
+    */
+    justify-content: space-around;/*espace entre les éléments de taille identique*/
+    align-items: center;/* centrer le texte*/
+   }
+
+   /**********************navigation**************/
+
+   nav{
+    background-color: rgb(36, 244, 4);
+   }
+
+   ul{
+    margin:0; /* pas de marge*/
+    padding:  2em 0; /* marge autour du texte*/
+    display:flex;
+    flex-flow: row nowrap;/* sans déplacement*/
+    justify-content: center; /*centrer lme texte*/
+    gap:5%;/* ecart entre les texte*/
+    list-style-type:none;/* apparence de la puce non c'est retire les puces*/
+}
+
+li a{
+    text-decoration-line: now;/*type de décoration linéaire*/
+    text-transform:uppercase;/*texte en capital*/
+    front-weight 700;/* texte en gras*/
+    color:white;/*couleur du texte*/
+}
+
+li a: :hover{
+    color:darkorange;/*changement de couleur sur le lien quand on passe avec la souris*/
+}
+
+/**************************Contenu**********************/
+
+.container{
+    display: flex;/*type d'afficahge en bloc ou inline*/
+    flex-flow:row nowrap;/*type de cascade si a la ligne ou autre*/
+    justify-content: space-between;/* espace réparti entre les éleément*/
+
+}
+
+aside{
+    background-color: rgb(247, 4, 4);
+    padding:5%;
+    flex-grow:1;/*expansion entre élément*/
+}
+
+main{
+    background-color: darkmagenta;
+    padding:5%;
+    flex-grow:3;/*décalement entre les deux blocs de côter*/
+}
+/*********************************FOOTER****************/
+
+footer{
+    background-color: brown;/*couleur de fond du texte*/
+    padding: 2% 0; /* 2% haut plus bas et 0 pour les côter*/
+    text-align:center;/* texte centrer*/
+}
+

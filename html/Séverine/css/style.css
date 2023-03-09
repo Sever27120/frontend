@@ -1,0 +1,44 @@
+{
+    box-sizing: border-box;
+    front-familly:"Robotto" now sherif;
+    
+}
+
+header{
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{
+    background-color:black;
+   }
+
+   ul{
+    margin:0; 
+    padding:  2em 0; 
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center; 
+    gap:2%;
+    list-style-type:none;
+   }
+   li a{
+    text-decoration-line: now;
+    text-transform:uppercase;
+    front-weight 700;
+    color:aqua;
+}
+.centrage{
+   text-align: center;
+}
+
+button{
+        background-color:green;
+        border-radius: 10px;
+        border: 4px double black;
+        color:white;
+}
+
