@@ -1,9 +1,11 @@
+
 body{
+
     background-color: black;
 }
 
 .navbar {
-    navbar {
+   
         position:fixed;
         width:100%;
         background-color:#282a2e !important;
@@ -14,18 +16,29 @@ body{
     }
    a{
     color:red!important;
-    font-family:;
+    font-family:"Hard-rock";
+
    } 
-}
 
 
 section{
-    width: 25%;
-   
+    width: 100%;
+    margin-top: 100px;
+    margin-right: 215px;
+    margin-left: 215px;
+    padding-left: 215px;
+    padding-right: 215px; 
+    text-align: center;
 }
 
 .carousel-item
 {
     border-radius: 12px;
+    height:auto;
+    width: 25%;
+}
+
+aside{
+    flex-direction:column;
 }
 
