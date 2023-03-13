@@ -1,11 +1,11 @@
 
 body{
-
+    
     background-color: black;
 }
 
 .navbar {
-   
+    
         position:fixed;
         width:100%;
         background-color:#282a2e !important;
@@ -38,7 +38,36 @@ section{
     width: 25%;
 }
 
-aside{
-    flex-direction:column;
+.figure-caption{
+    color:white;
+}
+h2{
+    text-align: center;
+    color:white;
+}
+img{
+    text-align: center;
+}
+col{
+    color:red;
 }
 
+.form-label{
+    color:white;
+}
+.form-control{
+    color:red;
+}
+p{
+    text-align: center;
+    color:white;
+}
+.btn{
+    background-color:red;
+
+    
+}
+aside{
+    text-align: center;
+    
+}
