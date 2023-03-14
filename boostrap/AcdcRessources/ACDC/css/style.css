@@ -1,7 +1,7 @@
 
+
 body{
-    
-    background-color: black;
+    background-color: black; 
 }
 
 .navbar {
@@ -13,12 +13,12 @@ body{
         top:0;
         z-index:10;
         font-family:"HARD_ROCK";
+    
     }
-   a{
-    color:red!important;
-    font-family:"Hard-rock";
-
-   } 
+   a.nav-link{
+    color:red;
+   }
+  
 
 
 section{
@@ -63,11 +63,52 @@ p{
     color:white;
 }
 .btn{
-    background-color:red;
+    background-color:red;   
+}
+a.btn{
+    color:white;
+}
 
+aside{
+    text-align: center;  
+}
+
+.card-text{
+    color:black;
+}
+.g-4{
+    margin-left:250px;
+    margin-right:250px;
+}
+main{
+    text-align: center;
+}
+table{
+    width:100%;
+    position: ;
+    justify-content: center;
     
 }
-aside{
-    text-align: center;
-    
+.table-dark{
+   width: 70%;
+    margin-left: 300px;
+    margin-right:200px;
+    align
+}
+
+.mb-3{
+ margin-left: 400px;
+  margin-right: 400px;
+}
+thead{
+    color:red;
+}
+@media screen and (max-width: 576px)
+{
+
+}
+@media screen and (max-width: 768px){
+li{
+text-align: left;
+}
 }

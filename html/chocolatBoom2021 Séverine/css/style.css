@@ -61,7 +61,7 @@ img{
 section{
     background-color:rgb(36, 143, 143);
     width:70%;
-    margin-left: 216px;
+    margin-left: 289px;
     color:white;
 
 }
@@ -70,7 +70,7 @@ section{
 aside{
     background-color:white;
     width:30%;
-    margin-right:216px;
+    margin-right:289px;
         
 }
 
@@ -90,6 +90,7 @@ a{
 section {
     width: 100%;
     order: 5px;
+    flex-direction:column;
 }
 aside{
     display:none;
@@ -99,7 +100,7 @@ h2{
 }
 p{
     width: 100%;
-    font-size:xx-large;
+    font-size:xx-small;
    
 }
 }
@@ -119,6 +120,6 @@ aside{
    
 }
 main{
-flex-direction:column;
+    flex-direction:column;
 }
 }
