@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(0, 106, 128);
+}
+
+.nav-link{
+    color:white;
+}
+nav{
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+.navbar{
+    position:relative;
+}
+
+li.nav-item{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.container{
+    width:100%;
+}
+
+@media screen and (max-width: 576px) 
+{
+    a.navbar-brand{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+  
+}
