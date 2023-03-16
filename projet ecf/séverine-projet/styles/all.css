@@ -3,26 +3,25 @@ body{
 }
 
 .nav-link{
-    color:white;
+    color:rgb(3, 80, 96);
+    font-size:50px;  
 }
 nav{
     width: 100%;
     font-family: 'Pacifico', cursive;
-    font-size: 30px;
     box-sizing: border-box;
     border-bottom: 2px solid white;
     font-weight: bold;
 }
-.navbar{
-    position:relative;
-}
+
 
 li.nav-item{
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
+
 .container{
     width:100%;
 }

@@ -1,19 +1,33 @@
 .video{
     width: 100%;
     position:fixed;
-    top: 0px;
-    bottom: 0px;
-    right:0;
-    left:0;
+    top: -225px;
     z-index:-70;
+    left:0px;
+    bottom:50px;
 }
 
 section{
     color:white;
     text-align: justify; 
-    margin-top: 50px;  
+    margin-top: 40px;  
 }
 
 h3{
     text-decoration:underline;
+    font-size: 30px;;
+}
+li{
+    font-size: 25px;
+    text-align: justify;
+}
+.carte{
+    position:center;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;   
+}
+
+.logo-zoo-beauval{
+    justify-content: right;
 }
