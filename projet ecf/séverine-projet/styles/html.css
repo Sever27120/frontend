@@ -7,4 +7,21 @@
     right:0;
     left:0;
     z-index:-70;
+    position: fixed;
 }
+h3{
+    text-decoration: underline;
+}
+ section{
+    text-align: center;
+    color:aqua;
+    margin-top: 70px;
+    font-size: large;
+    position:fixe;
+ }
+
+ #dome{
+    width: 800px;
+    height: 500px;
+    margin-top: 154px;
+ }
