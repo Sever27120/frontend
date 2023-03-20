@@ -1,35 +1,85 @@
+body{
+   font-family:'Vast Shadow', cursive;
+}
+
 .image{
-    width: 100%;
-    height: 70%;
-    position:fixed;
+   
+    height:600px;
+    position:absolute;
     top: 0px;
     bottom: 0px;
     right:0;
     left:0;
     z-index:-70;
-
 }
+
+ul{
+   text-align: center;
+}
+
 h3{
     text-decoration: underline;
+    text-align: center;
+    font-size:50px; 
 }
  section{
-    text-align: center;
-    color:rgb(246, 65, 15);
-    margin-top: 110px;
+    color:white;
+    margin-top: 150px;
     font-size: large;
-    position:fixe;
+    position:absolute;
+    top:100px;  
  }
 
- #dome{
-    width: 800px;
-    height: 500px;
-    margin-top: 154px;
+ td{
+   font-size: 20px;
+}
+th{
+   font-size:30px
+}
+
+ li{
+   font-size: 25px;
  }
+
+h2{
+   text-decoration: underline;
+   text-align: center;
+   font-size:40px; 
+}
+
+p{
+  font-size: 25px;
+}
+
+.clearfix
+{
+   margin-top:750px;
+
+}
+
 
  footer{
     color:white;
     text-align: center;
+    
  }
+ 
+ #police
+ {
+   font-size: 15px;
+ }
+
  a{
     color:black;
+ }
+ .table-responsive{
+
+   margin-left: 300px;
+   margin-right: 300px;
+ }
+
+ #animaux
+ {
+   width: 800px;
+   height: 800px;;
  }

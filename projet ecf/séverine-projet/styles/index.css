@@ -1,3 +1,8 @@
+body{
+  font-family:'Vast Shadow', cursive;
+}
+
+
 .video{
     width: 100%;
     position:fixed;
@@ -8,60 +13,71 @@
 }
 
 section{
-    width: 70%;
+    width: 50%;
     color:white;
     text-align: justify; 
-    margin-top: 40px;
-    margin-left:20px;  
+    top:150px;
+    left:20px;
+    z-index: 1; 
+    position:relative;
+    
 }
+
+
 
 h3{
     text-decoration:underline;
     font-size: 30px;
     margin-left: 40px;
+    
 }
-
 li{
     margin-left: 50px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
     margin-left: 50px;
-}
+ 
+}   
 
 .carte{
-    width: 60%;
-    position:center;
+    width: 50%;
+    position:absolute;
     margin-top: 10px;
     margin-left: 20px;
-    margin-bottom: 20px;   
+    margin-bottom: 20px;  
+    z-index: -20px; 
 }
 
 
 
 .logo-zoo-beauval
 {
-    position: absolute;
-    top: 200px;
+    position:absolute;
+    bottom:400px;
     left:1100px;
+  
 }
 
 .logo-zoo-de-Paris
 {
-    position: absolute;
-    top:450px;
-    right:200px;
+    position:absolute;
+    bottom: 100px;
+    left: 1500px;
 }
 
 .logo-zoo-le-pal
 {
-    position: absolute;
-    top:650px;
+    position:absolute;
     left:1100px;
+    bottom:-150px;
+    
 }
 
 @media screen and (max-width: 900px)
 {
-  
+  section{
+    top:250px;
+  }
   li{
     font-size:20px;
   }
