@@ -76,8 +76,13 @@ li{
 @media screen and (max-width: 900px)
 {
   section{
-    top:250px;
+    
+    flex-direction: row;
   }
+  main{
+    display:block;
+   }
+
   li{
     font-size:20px;
   }
@@ -86,28 +91,5 @@ li{
 @media screen and (max-width: 576px)
 {
    
-    section{
-        width:100%;
-        font-size:50%;
-        
-    }
-
-  h3{
-    width: 100%;
-    margin-left: 600px;
-    
-   
-  }
-
-  li{
-    width: 100%;
-    margin-left: 600px;
-    
-  }
   
-  img{
-    position: absolute;
-    flex-direction: column;
-    
-  }
 }

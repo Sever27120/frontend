@@ -14,7 +14,6 @@ body{
 .navbar{
     top:0px;
     width: 100%;
-    
     box-sizing: border-box;
     font-weight: bold;
     position: fixed;  
@@ -22,7 +21,7 @@ body{
 
 .container-fluid{
     border-bottom: 2px solid white;
-    display:inline-flex;
+    display:inline;
 }
 
 
@@ -33,18 +32,17 @@ li.nav-item{
     padding-top: 30px;
 }
 
-.container{
-    width:50%;
-}
 
 
 
 @media screen and (max-width: 900px)
 
 {
-    .nav-link{
-        font-size:30px;
-    }
+   li a{
+    display:block;
+    width: 60px;
+   }
+    
 }
 
 @media screen and (max-width: 576px) 
