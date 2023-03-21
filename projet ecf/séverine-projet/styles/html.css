@@ -83,3 +83,30 @@ p{
    width: 800px;
    height: 800px;;
  }
+ @media screen and (max-width: 900px)
+{
+p3
+{
+   display:none;
+}
+ 
+.table-responsive{
+ 
+   margin-left:0px;
+   margin-right:0px;
+}
+td,th{
+   font-size:small;
+}
+}
+
+@media screen and (max-width: 576px) 
+{
+   
+img{
+   margin-left: 0px;
+}
+  p2{
+   display:none;
+  }
+}

@@ -40,15 +40,32 @@ li.nav-item{
 
 
 @media screen and (max-width: 900px)
-
 {
-    .nav-link{
+    .navbar{
+        position:absolute;
+    }
+
+    ul.navbar{
+
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    a.nav-link{
         font-size:30px;
     }
+
+    
 }
 
 @media screen and (max-width: 576px) 
 {
+    .navbar{
+        position:absolute;
+        
+    }
+
     nav{
 
        display: block;
@@ -60,7 +77,12 @@ li.nav-item{
         height: 300px;
         margin-left: 400px;
     }
-  
+   
+  button{
+       
+       display: block;
+  }
+    
   
 }
 

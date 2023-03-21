@@ -50,34 +50,39 @@ li{
 
 
 
-.logo-zoo-beauval
+#logo-zoo-beauval
 {
     position:absolute;
-    bottom:400px;
+    bottom:500px;
     left:1100px;
   
 }
 
-.logo-zoo-de-Paris
+#logo-zoo-de-Paris
 {
     position:absolute;
-    bottom: 100px;
+    bottom: 200px;
     left: 1500px;
 }
 
-.logo-zoo-le-pal
+#logo-zoo-le-pal
 {
     position:absolute;
     left:1100px;
-    bottom:-150px;
+    bottom:0px;
     
 }
 
 @media screen and (max-width: 900px)
 {
-  section{
-    top:250px;
+
+  h3,p,h2{
+    font-size: medium;
   }
+  main{
+    display:none;
+  }
+
   li{
     font-size:20px;
   }
@@ -85,29 +90,30 @@ li{
 
 @media screen and (max-width: 576px)
 {
-   
+   img{
+    margin-left:50px;
+    width: 300px;
+   }
     section{
-        width:100%;
-        font-size:50%;
-        
+       margin-top:150px;
+      left:50px;
     }
 
-  h3{
-    width: 100%;
-    margin-left: 600px;
-    
-   
-  }
+    h3,li{
+      font-size:50px;
+    }
 
-  li{
-    width: 100%;
-    margin-left: 600px;
-    
-  }
+    .img-fluid{
+
+      margin-left:0px;
+    }
+
+    main{
+      display:none
+    }
+
   
-  img{
-    position: absolute;
-    flex-direction: column;
+
     
   }
 }
