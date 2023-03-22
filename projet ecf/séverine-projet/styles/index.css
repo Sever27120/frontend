@@ -75,6 +75,7 @@ li{
 
 @media screen and (max-width: 900px)
 {
+<<<<<<< HEAD
 
   h3,p,h2{
     font-size: medium;
@@ -82,6 +83,15 @@ li{
   main{
     display:none;
   }
+=======
+  section{
+    
+    flex-direction: row;
+  }
+  main{
+    display:block;
+   }
+>>>>>>> a38a08c4dd40e390cd12e423a64ab5d2bba1641c
 
   li{
     font-size:20px;
@@ -90,6 +100,7 @@ li{
 
 @media screen and (max-width: 576px)
 {
+<<<<<<< HEAD
    img{
     margin-left:50px;
     width: 300px;
@@ -116,4 +127,8 @@ li{
 
     
   }
+=======
+   
+  
+>>>>>>> a38a08c4dd40e390cd12e423a64ab5d2bba1641c
 }

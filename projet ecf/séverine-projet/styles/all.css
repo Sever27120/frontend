@@ -14,7 +14,6 @@ body{
 .navbar{
     top:0px;
     width: 100%;
-    
     box-sizing: border-box;
     font-weight: bold;
     position: fixed;  
@@ -22,7 +21,7 @@ body{
 
 .container-fluid{
     border-bottom: 2px solid white;
-    display:inline-flex;
+    display:inline;
 }
 
 
@@ -33,14 +32,12 @@ li.nav-item{
     padding-top: 30px;
 }
 
-.container{
-    width:50%;
-}
 
 
 
 @media screen and (max-width: 900px)
 {
+<<<<<<< HEAD
     .navbar{
         position:absolute;
     }
@@ -56,6 +53,12 @@ li.nav-item{
         font-size:30px;
     }
 
+=======
+   li a{
+    display:block;
+    width: 60px;
+   }
+>>>>>>> a38a08c4dd40e390cd12e423a64ab5d2bba1641c
     
 }
 
