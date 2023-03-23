@@ -1,22 +1,11 @@
-var nombre;
+//demander à l'utilisateur un chiffre
 
-var N=window.prompt("Ecrire un nombre");
+var N=prompt("Ecrire un nombre N");
+// pour que l'ordinateur sort tous les chiffres avant N
 
-while (nombre!="") ;
-
+for(var i=0;i<N;i++)
 {
-   
-        nombre=prompt("Saisir un nombre");   
+        console.log(i);
 }
 
-if (nombre!="")
 
-{
-    nombre++;2
-
-
-    nombre<N;
-
-    
-}
-alert ("les nombre inférieur à N sont:" +nombre );
