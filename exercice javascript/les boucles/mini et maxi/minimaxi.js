@@ -1,24 +1,38 @@
 
-var entiers=0;
-nbmin=entier;
-nbmax=entier;
 
- while(entier!=0){
+  
+  
+  var min,max,i;
 
-    var entier=prompt("Saisir un entier");
+  i=0;
 
-    entiers+=entier+ "\n";
+  min=0;
 
-    if(entiers<nbmx)
-    {
+  max=0;
 
-    alert("le nombre le plus grand:"+nbmax);
-}
-    else(nbmin<entiers)
-{
-    alert("le nombre le plus etit:" +nbpetit);
-}
-  }
+   while(entier!=0){
+  
+      var entier=prompt("Saisir un entier");
+  
+      console.log(entier);
+
+      if(entier[i]<min){
+
+        min=entier[i];
+
+        console.log(min);
+      } 
+      else if (entier[i]>max){
+        max=entier[i];
+        console.log(max);
+      }  
+    }
+      
+      
+      alert(min);
+      alert(max);
+      
+  // mon code ne fonctionne pas pour me donner le min et max.
  
-  console.log("Min saisi : "+parseInt(Math.min(...tab)));
-  console.log("Max saisi : "+parseInt(Math.max(...tab)));
+   
+
