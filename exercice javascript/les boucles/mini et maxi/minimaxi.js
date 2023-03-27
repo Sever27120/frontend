@@ -1,38 +1,44 @@
 
 
-  
-  
-  var min,max,i;
+var tab = [];
 
-  i=0;
+var saisie ;
 
-  min=0;
+var mini, maxi;
 
-  max=0;
+while (saisie != 0) {
 
-   while(entier!=0){
-  
-      var entier=prompt("Saisir un entier");
-  
-      console.log(entier);
+  saisie = parseInt(prompt("Saisir un entier"));
 
-      if(entier[i]<min){
+  if (saisie != 0) {
 
-        min=entier[i];
 
-        console.log(min);
-      } 
-      else if (entier[i]>max){
-        max=entier[i];
-        console.log(max);
-      }  
+
+    if (mini == undefined) {
+      mini = saisie;
     }
-      
-      
-      alert(min);
-      alert(max);
-      
-  // mon code ne fonctionne pas pour me donner le min et max.
- 
-   
+    if (maxi == undefined) {
+      maxi = saisie;
+    }
+
+
+    if (mini > saisie) {
+
+      mini = saisie;
+    }
+
+
+    if (maxi < saisie) {
+
+      maxi = saisie;
+    }
+  }
+}
+
+console.log("mini:" + mini);
+console.log("maxi:" + maxi);
+
+
+
+
 

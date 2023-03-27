@@ -1,19 +1,32 @@
 
 
 
-function cube(n,p)
-{
-    var resultat= p*p*p;
-    
-    return resultat;
-    var resultat2=cube(p);
+var calculdecube= function (y)
+ {
+   var x = prompt("Saisir un nombre");
 
+   var y = prompt("Saisir le deuxième nombre");
+
+var resultat = y * y * y;
+
+return resultat;
+
+alert ("Le cube de" +y+ " est égal à"+resultat);
+
+var resultat1=y*x
+
+alert ("Le produit de "+y+"x"+x+"est égale à "+ resultat1);
+}
+
+var afficheImg=function(image)
+{
+ var image=scr
+
+  
 }
 
 
-var x=prompt("Ecrire le chiffre x!");
-
-var y=prompt("Ecrire le chiffre de y!");
+calculdecube();
 
 
-console.log( "Le cube de" +y+ "est égale à" + cube(y) );
+

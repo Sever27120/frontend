@@ -3,8 +3,6 @@ var somme=0;
 
 var moyenne=0;
 
-
-
 var nbentier=0;
 
 
