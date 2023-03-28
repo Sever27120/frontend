@@ -1,0 +1,31 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Recherche en JavaScript</title>
+    <script>
+    window.addEventListener("load",registerEvents,false);
+
+    function registerEvents(e){
+        document.getElementById("ask").addEventListener("click",findAnswer,false);
+    }
+
+    function findAnswer(){
+      var question = document.getElementById("userQuestion").value;
+      var re = new RegExp("JavaScript");
+      if (re.test(question)===true){
+        document.getElementById("answer").innerHTML = "Une question sur JavaScript ? Voyez le livre Coder avec JavaScript pour les Nuls par Chris Minnick et Eva Holland";
+        console.log("JavaScript!");
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <form id="userInput">
+      <label>Entrez votre question : 
+      <textarea id="userQuestion"></textarea>
+      </label>
+      <button id="ask" type="button">Obtenir une réponse</button>
+    </form>
+    <div id="answer"></div>
+  </body>
+</html>

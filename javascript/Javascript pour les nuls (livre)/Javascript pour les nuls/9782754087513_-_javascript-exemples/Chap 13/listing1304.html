@@ -1,0 +1,53 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Animation JavaScript</title>
+    <style>
+      #square {
+        width: 100px;
+        height: 100px;
+        background-color: #333;
+        position: absolute;
+        left: 0px;
+        top: 100px;
+      }
+    </style>
+    <script>
+    // attend que la fenêtre soit totalement chargée
+    window.addEventListener('load',initialize,false);
+
+    function initialize(){
+
+
+      //déplace le carré sur un clic
+      document.getElementById("square").addEventListener('click',function(e){
+
+      //récupère la position de départ
+      var left = window.getComputedStyle(e.target).getPropertyValue("left");
+
+      //convertit la valeur left en base 10
+      left = parseInt(left, 10);
+
+      moveSquare(left,100);
+
+      }, false);
+
+    }
+
+    function moveSquare(left,numMoves) {
+      document.getElementById("square").style.left = left+"px";
+
+      if (numMoves > 0) {
+        numMoves--;
+        left++;
+        setTimeout(moveSquare,10,left,numMoves);
+      }else{
+        return;
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="square"></div>
+  </body>
+</html>

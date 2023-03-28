@@ -1,0 +1,42 @@
+<html>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+    <title>Comptage</title>
+    <script>
+    // attend que la fenêtre soit finie de charger avant d'enregistrer les événements
+    window.addEventListener('load',registerEvents,false);
+
+    // créée une variable globale pour le comptage
+    var theCount = 300;
+
+    /** 
+    Enregistre les événements onclick
+    */
+    function registerEvents(e){
+
+    document.getElementById("incrementButton").addEventListener('click',increaseCount,false);
+    document.getElementById("incrementButton").addEventListener('click',changeSize,false);
+
+    }
+
+    /**
+    Incrémente theCount et affiche le résultat.
+    */
+    function increaseCount(e){
+      theCount++;
+      document.getElementById("currentCount").innerHTML = theCount;
+    }
+    /**
+    Change la taille des caractères pour le compteur
+    */
+    function changeSize(e){
+      document.getElementById("currentCount").style.fontSize = theCount;
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Cliquez sur le bouton pour compter.</h1>
+    <p>Valeur courante : <span id="currentCount">0</span></p>
+    <button id="incrementButton">Incrémenter le compteur</button>
+  </body>
+  </html>

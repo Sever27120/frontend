@@ -1,0 +1,44 @@
+
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+  <title>Opérateurs arithmétiques</title>
+</head>
+<body>
+  <h1>Le Jeu de l'Anniversaire Dévoilé</h1>
+  <p>
+  <ul>
+  <li>Entrez le nombre 7</li>
+  <li>Multipliez par le jour de votre naissance</li>
+  <li>Soustrayez 1</li>
+  <li>Multipliez par 13</li>
+  <li>Ajoutez le mois de votre naissance</li>
+  <li>Ajoutez 3</li>
+  <li>Multipliez par 11</li>
+  <li>Soustrayez le jour de votre naissance</li>
+  <li>Soustrayez le mois de votre naissance</li>
+  <li>Divisez par 10</li>
+  <li>Ajoutez 11</li>
+  <li>Divisez par 100</li>
+  </ul>
+  </p>
+  <script>
+  var numberSeven = Number(prompt('Entrez le nombre 7'));
+  var birthDay = Number(prompt('Entrez le jour de votre naissance'));
+  var calculation = numberSeven * birthDay;
+  calculation = calculation - 1;
+  calculation = calculation * 13;
+  var birthMonth = Number(prompt('Entrez le mois de votre naissance'));
+  calculation = calculation + birthMonth;
+  calculation = calculation + 3;
+  calculation = calculation * 11
+  calculation = calculation - birthDay;
+  calculation = calculation - birthMonth;
+  calculation = calculation / 10;
+  calculation = calculation + 11;
+  calculation = calculation / 100;
+
+  document.write("Voici votre date d'anniversaire : " + calculation);
+ </script>
+</body>
+</html>

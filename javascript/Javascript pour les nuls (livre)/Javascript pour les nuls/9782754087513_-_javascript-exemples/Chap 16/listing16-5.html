@@ -1,0 +1,41 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Afficher des données JSON</title>
+    <script>
+    window.addEventListener('load',init,false);
+    function init(e){
+      document.getElementById('myButton').addEventListener('click',documentLoader,false);
+    }
+
+    function reqListener () {
+      // convertit la chaîne du fichier en objet avec  JSON.parse
+      var obj = JSON.parse(this.responseText);
+
+      // affiche les données comme un objet quelconque
+      document.getElementById('book_title').innerHTML = obj.book_title;
+      document.getElementById('book_author').innerHTML = obj.book_author;
+      document.getElementById('summary').innerHTML = obj.summary;
+
+    }
+
+    function documentLoader(){
+      var oReq = new XMLHttpRequest();
+      oReq.onload = reqListener;
+      oReq.open("get", "listing16-4.json", true);
+      oReq.send();
+    }
+    </script>
+  </head>
+  <body>
+  <form id="myForm">
+    <button id="myButton" type="button">Cliquez pour charger</button>
+  </form>
+  <h1>Titre du livre</h1>
+  <div id="book_title"></div>
+  <h2>Auteurs</h2>
+  <div id="book_author"></div>
+  <h2>Résumé</h2>
+  <div id="summary"></div>
+  </body>
+</html>

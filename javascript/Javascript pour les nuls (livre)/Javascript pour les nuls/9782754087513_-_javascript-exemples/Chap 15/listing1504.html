@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Utiliser des fermetures</title>
+<script>
+function greetVisitor(phrase) { 
+
+  var welcome = phrase + ". Content de vous voir !<br><br>"; // Local variable 
+  var sayWelcome = function() { 
+    document.getElementById("greeting").innerHTML += welcome; 
+  } 
+    return sayWelcome; 
+} 
+// attend jusqu'à ce que le document soit chargé
+document.addEventListener('DOMContentLoaded', function() { 
+
+// créée une fonction
+var personalGreeting = greetVisitor("Bienvenue, ami"); 
+// créée une autre fonction
+var anotherGreeting = greetVisitor("Salut, Ami");
+
+// vérifie le code de la première fonction
+document.getElementById("greeting").innerHTML += 
+"personalGreeting.toString() <br>" + personalGreeting.toString() + "<br>";
+
+// exécute la première fonction
+personalGreeting(); // alerts "Hola Amiga. Great to see you!""
+
+// vérifie le code de la seconde fonction
+document.getElementById("greeting").innerHTML += 
+"anotherGreeting.toString() <br>" + anotherGreeting.toString() + "<br>";
+
+// exécute la seconde fonction
+anotherGreeting(); // alerts "Salut, Ami. je suis content de vous voir !"
+
+// contrôle la première fonction
+personalGreeting(); // alerts "Bienvenue, ami. Content de vous voir !"
+
+// termine la méthode addEventListener
+}, false);
+</script>
+</head>
+<body>
+  <p id="greeting"></p>
+
+</body>
+</html>

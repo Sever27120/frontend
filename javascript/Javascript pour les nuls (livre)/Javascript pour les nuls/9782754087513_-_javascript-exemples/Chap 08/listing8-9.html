@@ -1,0 +1,34 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Qui sont ces personnes ?</title>
+  </head>
+  <body>
+	<script>
+	
+	
+	function Personne(){
+	  this.eyes = 2;
+	  this.ears = 2;
+	  this.arms = 2;
+	  this.hands = 2;
+	  this.feet = 2;
+	  this.legs = 2;
+	  this.species = "Homo sapiens";
+	}
+	
+var SandyDurand = new Personne();
+var LouisDupont = new Personne();
+var JeanBon = new Personne();
+
+	// Personne a besoin de plus de propriétés !
+	Personne.prototype.knees = 2;
+	Personne.prototype.toes = 10;
+	Personne.prototype.elbows = 2;
+
+	// Vérifie les valeurs des nouvelles propriétés pour un objet existant
+	document.write (JeanBon.toes); // donne la valeur 10
+	
+	</script>
+</body>
+</html>

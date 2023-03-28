@@ -1,0 +1,31 @@
+<html> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Charger des données externes</title>
+    <script>
+    window.addEventListener('load',init,false);
+    function init(e){
+      document.getElementById('myButton').addEventListener('click',documentLoader,false);
+    }
+
+    function reqListener () {
+      console.log(this.responseText);
+      document.getElementById('content').innerHTML = this.responseText;
+
+    }
+
+    function documentLoader(){
+      var oReq = new XMLHttpRequest();
+      oReq.onload = reqListener;
+      oReq.open("get", "loadme.txt", true);
+      oReq.send();
+    }
+    </script>
+  </head>
+  <body>
+  <form id="myForm">
+    <button id="myButton" type="button">Cliquer pour charger</button>
+  </form>
+  <div id="content"></div>
+  </body>
+</html>

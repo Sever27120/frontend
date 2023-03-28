@@ -1,0 +1,25 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>Message de Bienvenue</title>
+</head>
+<body>
+  <script>
+
+    /**
+    *Message de bienvenue ajustable
+    */
+    function flexibleWelcome(){
+    var welcome = "Bienvenue, ";
+    for (i = 0; i < arguments.length; i++) {
+     welcome = welcome + arguments[i] + "";
+    }
+    return welcome;
+    }
+
+    document.write(flexibleWelcome("Christopher-","James-","Phoenix-","Minnick") + "<br>");
+    document.write(flexibleWelcome("Eva-","Ann-","Holland") + "<br>");
+	
+  </script>
+</body>
+</html>

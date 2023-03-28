@@ -1,0 +1,21 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Image avec effet Rollover</title>
+    <script>
+
+    function swapImage(imgToSwap){
+      imgToSwap.src = "button2.png";
+      imgToSwap.alt = "Vous survolez mon bouton avec votre souris !";
+    }
+    function swapBack(imgToSwap){
+      imgToSwap.src = "button1.png";
+      imgToSwap.alt = "Survolez moi !";
+    }
+
+    </script>
+  </head>
+  <body>
+    <img src="button1.png" id="myButton" onmouseover="swapImage(this);" onmouseout="swapBack(this);" alt="Survolez moi !">
+  </body>
+</html>

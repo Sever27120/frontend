@@ -1,0 +1,37 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+  <title>Introduction Dynamique</title>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <script>
+  // attend que tout soit chargé
+  $(document).ready(function(){
+    // lorsque le bouton est cliqué
+    $('#loadIt').on('click',function(){
+      // récupère la valeur de la sélection et y ajoute .txt
+      var fileToLoad = $('#intros').val() + '.txt';
+      // ouvre ce fichier
+      $.ajax({url:fileToLoad,success:function(result){
+        // en cas de succès de l'ouverture, affiche le contenu du fichier
+        $('#introtext').html(result);
+      }});
+    });
+  });
+
+  </script>
+</head>
+<body>
+  <h1>Sélectionnez le type d'information voulu :</h1>
+  <form id="intro-select">
+    <select id="intros">
+      <option value="none">Faites un choix</option>
+      <option value="formal">Formel</option>
+      <option value="friendly">Amical</option>
+      <option value="piglatin">Charabia</option>
+    </select>
+    <button id="loadIt" type="button">Chargement !</button>
+  </form>
+  <div id="introtext"></div>
+</body>
+</html>

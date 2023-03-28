@@ -1,0 +1,23 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title></title>
+    <script>
+    function checkMath(result){
+      var userMath = document.getElementById("answer1").value;
+      var errors = document.getElementsByClassName("error");
+
+      if(parseInt(userMath) != parseInt(result)) {
+        errors[0].innerHTML = "C'est faux. Vous avez entré " + userMath + ". La bonne réponse est " + result +".";
+      } else {
+        errors[0].innerHTML = "Correct !";
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <label for = "number1">4+1 = </label><input type="text" id="answer1" value="">
+    <button id="submit" onclick="checkMath(4+1);">Révisez vos maths !</button>
+    <h1 class="error"></h1>
+  </body>
+</html>

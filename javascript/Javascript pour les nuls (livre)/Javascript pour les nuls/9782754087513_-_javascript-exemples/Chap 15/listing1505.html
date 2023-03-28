@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>La fabrique de fonction</title>
+    <script>
+
+    function createMessageAlert(theMessage){
+      return function() {
+        alert (theMessage);
+      }
+    }
+    
+    var badEmailError = createMessageAlert("Adresse email inconnue !");
+    var wrongPasswordError = createMessageAlert("Mot de passe invalide !");
+    
+    window.addEventListener('load', loader, false);
+    function loader(){
+
+      document.login.yourEmail.addEventListener('change',badEmailError);
+      document.login.yourPassword.addEventListener('change',wrongPasswordError);
+
+    }
+
+    </script>
+  </head>
+  <body>
+    <form name="login" id="loginform">
+      <p>
+        <label>Entrez votre adresse email : 
+        <input type="text" name="yourEmail">
+        </label>
+      </p>
+      <p>
+        <label>Entrez votre mot de passe : 
+        <input type="text" name="yourPassword">
+        </label>  
+      </p>
+      <button>Soumettre</button>
+  </body>
+</html>

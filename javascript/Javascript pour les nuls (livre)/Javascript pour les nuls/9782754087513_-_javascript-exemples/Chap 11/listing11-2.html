@@ -1,0 +1,34 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Comptage</title>
+    <script>
+    // attend que la fenêtre soit finie de charger avant d'enregistrer les événements
+    window.onload = initializer;
+
+    // créée une variable globale pour le comptage
+    var theCount = 0;
+
+    /** 
+    Enregistre l'événement onclick
+    */
+    function initializer(){
+    document.getElementById("incrementButton").onclick = increaseCount;
+    }
+
+    /**
+    Incrémente theCount et affiche le résultat.
+    */
+    function increaseCount(){
+      theCount++;
+      document.getElementById("currentCount").innerHTML = theCount;
+    }
+    
+    </script>
+  </head>
+  <body>
+    <h1>Cliquez sur le bouton pour compter.</h1>
+    <p>Valeur courante : <span id="currentCount">0</span></p>
+    <button id="incrementButton">Incrémenter le compteur</button>
+  </body>
+  </html>

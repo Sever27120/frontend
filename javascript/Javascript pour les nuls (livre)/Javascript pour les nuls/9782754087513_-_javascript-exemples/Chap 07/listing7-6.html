@@ -1,0 +1,29 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>Arguments Passés Par Valeur</title>
+</head>
+<body>
+  <script>
+    /**
+    * Incrémente deux nombres
+    * @param {number} number1
+    * @param {number} number2
+    */
+    function addToMyNumbers(number1,number2){
+     number1++;
+     number2++;
+     console.log("nombre 1: " + number1);
+     console.log("nombre 2: " + number2);
+    }
+
+    var number1 = 3;
+    var number2 = 12;
+
+    addToMyNumbers(number1,number2); // passe les arguments
+
+    console.log("nombre original 1 : " + number1);
+    console.log("nombre original 2 : " + number2);
+  </script>
+</body>
+</html>

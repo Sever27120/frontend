@@ -1,0 +1,22 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title></title>
+    <script>
+    function numberElements(tagName){
+      var getTags = document.getElementsByTagName(tagName);
+      for(i=0; i < getTags.length; i++){
+        getTags[i].innerHTML = i+1;
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <h1>ce texte va disparaître</h1>
+    <h1>celui-ci sera remplacé</h1>
+    <h1>JavaScript va effacer ceci</h1>
+    <script>
+      numberElements("h1");
+    </script>
+  </body>
+</html>

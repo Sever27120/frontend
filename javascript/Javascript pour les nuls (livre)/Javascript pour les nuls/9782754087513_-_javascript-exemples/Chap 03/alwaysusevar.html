@@ -1,0 +1,29 @@
+<html>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <head>
+  </head>
+  <body>
+  <script>
+
+  var movie = "Le Parrain";
+
+  function showGoodMovie () {
+    alert (movie + " est un bon film !");
+  }
+
+  function showBadMovie () {	
+    movie = "Speed 2: Cruise Control";
+    alert (movie + " est un mauvais film");
+  }
+  // Quand nous exécutons la fonction 'mauvais film', movie n'est pas déclarée comme variable variable, donc elle change simplement la valeur de la  variable globale movie !
+
+  showGoodMovie (); // affiche "Le Parrain est un bon film !"
+
+  showBadMovie (); // affiche "Speed 2: Cruise Control est un mauvais film !"
+
+  // Oh non ! La variable globale est maintenant Speed 2: Cruise Control, donc plus le nom du bon film !
+  showGoodMovie (); // affiche "Speed 2: Cruise Control est un bon film !"
+
+  </script>
+  </body>
+</html>

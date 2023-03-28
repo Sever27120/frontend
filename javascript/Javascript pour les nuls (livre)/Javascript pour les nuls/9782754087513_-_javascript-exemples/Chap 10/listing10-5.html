@@ -1,0 +1,23 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title></title>
+    <script>
+    function calculateKPL(kms,litres){
+      document.getElementById("displayKms").innerHTML = parseInt(kms);
+      document.getElementById("displayLitres").innerHTML = parseInt(litres);
+      document.getElementById("displayKPL").innerHTML = kms/litres;
+    }
+    </script>
+  </head>
+  <body>
+    <p>Vous avez conduit <span id="displayKms">___</span> kilomètres.</p>
+    <p>Vous avez consommé <span id="displayLitres">___</span> litres de carburant.</p>
+    <p>Distance moyenne parcourue par litre de carburant : <span id="displayKPL">___</span> km.
+    <script>
+      var kmsParcourus = prompt("Entrez la distance parcourue");
+      var litresCarb = prompt("Entrez le nombre de litres de carburant utilisés");
+      calculateKPL(kmsParcourus,litresCarb);
+    </script>
+  </body>
+</html>

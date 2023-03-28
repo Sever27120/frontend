@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Trouvez le mot !</title>
+  </head>
+  <body>
+    <script>
+      var guessedWord = prompt("Quel est le mot auquel je pense ?");
+      while (guessedWord != "sandwich") {
+        if (guessedWord == "") { break; }
+        prompt("Non. C'est faux. Essayez encore.");
+      }
+      alert("Félicitations ! C'est exactement cela !");
+    </script>
+  </body>
+</html>

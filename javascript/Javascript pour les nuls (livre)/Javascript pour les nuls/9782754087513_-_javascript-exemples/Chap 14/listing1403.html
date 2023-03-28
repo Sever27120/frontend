@@ -1,0 +1,33 @@
+
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+  <title>Validateur de messagerie</title>
+  <script>
+    window.addEventListener('load',loader,false);
+    function loader(e){
+      e.preventDefault();
+      document.getElementById('emailinput').addEventListener('submit',validateEmail,false);
+    }
+
+    function validateEmail(e) { 
+        var re = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i;
+        if (re.test(e.target.yourEmail.value)) {
+          alert("Valide !");
+        } else {
+          alert("Invalide !");
+        }
+    } 
+
+  </script>
+</head>
+<body>
+  <form id="emailinput">
+    <label>Entrez une addresse de messagerie : 
+      <input type="text" id="yourEmail">
+    </label>
+    <input type="submit" value="Valider" id="validate">
+  </form>
+</body>
+</html>
+

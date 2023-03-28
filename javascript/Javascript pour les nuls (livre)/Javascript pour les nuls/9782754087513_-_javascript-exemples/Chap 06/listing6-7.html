@@ -1,0 +1,16 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+  <title>Trouvez le mot !</title>
+</head>
+<body>
+  <script>
+    var guessedWord = prompt("Quel est le mot auquel je pense ?");
+    while (guessedWord != "sandwich") { 
+	if (guessedWord =="") {break;} // quitte tout de suite la boucle si l'utilisateur n'a rien entré
+      prompt("Non. Mauvaire réponse. Essayez encore.");
+      }
+      alert("Félicitations ! C'est le bon mot !"); 
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Compter le nombre de lettres</title>
+    <script>
+      window.addEventListener('load',loader,false);
+
+      //produit une lettre aléatoire
+      var letter = String.fromCharCode(97 + Math.floor(Math.random() * 26));
+
+      //créée une  expression régulière en utilisant la lettre. Configure l'option g pour trouver toutes les occurences.
+      var re = new RegExp(letter,'g');
+
+      function loader(e){
+        document.getElementById("getText").addEventListener('submit',countLetter,false);
+      }
+
+      function countLetter(e){
+        e.preventDefault();
+        document.getElementById("results").innerHTML = "La lettre secrète était " + letter +".";
+        var userText = document.getElementById("userWords").value;
+        var matches = userText.match(re);
+
+        if (matches){
+        var count = matches.length;
+        } else {
+        var count = 0;
+        }
+
+        document.getElementById("results").innerHTML += " Vous avez saisi la lettre secrète " + count + " fois.";
+      }
+
+    </script>
+  </head>
+  <body>
+    <form id="getText">
+      <p>Je pense à une lettre ! Tapez une phrase, et je vous dirais combien de fois 
+        votre phrase utilise ma lettre secrète !</p>
+      <input type="text" name="userWords" id="userWords">
+      <input type="submit" name="submit">
+    </form>
+    <div id="results"></div>
+  </body>
+</html>

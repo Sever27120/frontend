@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+  <title>Bonjour, HTML!</title>
+</head>
+<body>
+  <h1>Comptons jusqu'à 10 avec JavaScript!</h1>
+  <p id="theCount"></p>
+  <script>
+    var count = 0;
+    while (count < 10) {
+      count++;
+      document.getElementById("theCount").innerHTML += count + "<br>";
+    }
+  </script>
+</body>
+</html>

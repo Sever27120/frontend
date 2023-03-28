@@ -1,0 +1,29 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>Préparez-moi un sandwich</title>
+</head>
+<body>
+  <script>
+
+    var sandwich = {
+    meat:"",
+    cheese:"",
+    bread:"",
+    condiment:"",
+    makeSandwich: function (meat,cheese,bread,condiment) {
+      sandwich.meat = meat;
+      sandwich.cheese = cheese;
+      sandwich.bread = bread;
+      sandwich.condiment = condiment;
+      var mySandwich = sandwich.bread + ", " + sandwich.meat + ", " + sandwich.cheese + ", " + sandwich.condiment;
+      return mySandwich;
+      }
+    }
+
+    var sandwichOrder = sandwich.makeSandwich("jambon","cheddar","pain au cumin","moutarde forte");
+    document.write (sandwichOrder);
+
+  </script>
+</body>
+</html>

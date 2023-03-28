@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>Choses à faire</title>
+    <script>
+    /* 
+    La fonction addThing répond aux clics sur le bouton 
+    "Telle est ma volonté !", récupère la valeur dans le  
+    champ de saisie, et ajoute la nouvelle chose à la liste.
+    */
+    function addThing(){
+      /* 
+      Recherche l'élément HTML ayant pour id = "thingToDo" 
+      et récupère sa valeur courante.
+      */
+      var newThing = document.getElementById("thingToDo").value;
+      /* 
+      Trouve l'élément ayant pour id="listOfThings" et change la valeur entre ses
+      balises de début et de fin en y ajoutant le texte saisi, suivi 
+      d'un <br>.
+      */
+      document.getElementById("listOfThings").innerHTML += newThing + "<br>";
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Les choses à faire quand j'ai le temps</h1>
+    <p id="listOfThings"></p>
+    <input type="text" id="thingToDo"><br>
+    <button id="add" onclick="addThing();">Telle est ma volonté !</button>
+  </body>
+</html>
