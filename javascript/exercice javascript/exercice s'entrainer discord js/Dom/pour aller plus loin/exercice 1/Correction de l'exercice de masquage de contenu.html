@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.gchagnon.fr/cours/dhtml/exercices/exo21cor.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Correction de l'exercice de masquage de contenu</title>
+
+<script>
+		function Init()
+		{
+			span1=document.getElementById("mContenu1");
+			span2=document.getElementById("mContenu2");
+			p1=document.getElementById("contenu1");
+			p2=document.getElementById("contenu2");
+
+			p1.style.display="none";p2.style.display="none";
+
+			span1.addEventListener("mouseover", masqueAffiche, false);
+			span2.addEventListener("mouseover", masqueAffiche, false);
+		}
+
+		function masqueAffiche(event)
+		{
+			let tabs = document.querySelectorAll("p[id]");
+			
+			for (let i=0;i<tabs.length;i++) tabs[i].style.display="none";
+			console.log("c"+this.id.substr(2));
+			document.getElementById("c"+this.id.substr(2)).style.display="block";
+			
+			
+		}
+</script>
+</head>
+<body onload="Init()" cz-shortcut-listen="true">
+
+<h1>Titre</h1>
+
+<p><span id="mContenu1">Afficher le contenu 1</span> - <span id="mContenu2">Afficher le contenu 2</span></p>
+
+<p id="contenu1" style="display: none;">Contenu 1</p>
+<p id="contenu2" style="display: none;">Contenu 2</p>
+
+</body></html>

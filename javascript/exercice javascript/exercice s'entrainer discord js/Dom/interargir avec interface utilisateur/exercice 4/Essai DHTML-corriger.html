@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.gchagnon.fr/cours/dhtml/exercices/exo15cor.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Essai DHTML</title>
+
+<style>
+	#citation {position: absolute; top: 50px; left: 50px;} 
+	#citation p{position: relative; top: 0px; left: 0px; color: black; font-weight: bold;}
+</style>
+<script>
+	couleur=0;
+
+	function anime_paragraphe(element)
+		{
+			element.style.color="rgb("+String(couleur)+"%,"+String(couleur)+"%,"+String(couleur)+"%)";
+			if (couleur < 90) {setTimeout(function(){anime_paragraphe(element)}, 100);couleur++}
+			if (couleur >= 90) {zoneinfo=document.getElementById("info");zoneinfo.innerHTML="Plop&nbsp;!";}	
+		}
+
+	function anime()
+		{
+			let animable=document.getElementById("citation");
+			
+			for (let i in animable.childNodes) if ((animable.childNodes[i].nodeName=="p") || (animable.childNodes[i].nodeName=="P"))
+				{
+					anime_paragraphe(animable.childNodes[i]);
+				}
+		}
+	
+</script>
+
+</head>
+<body cz-shortcut-listen="true">
+
+<input type="button" value="Lancer l&#39;animation!" onclick="anime()">
+<div id="citation"><p>un essai de texte</p><p>avec un retour à la ligne</p><p>et un second&nbsp;!</p><p>C'est chouette, non&nbsp;?</p></div>
+<div><p id="info"></p></div>
+
+
+</body></html>

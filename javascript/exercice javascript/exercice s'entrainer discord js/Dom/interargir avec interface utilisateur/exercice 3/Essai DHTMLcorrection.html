@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0057)http://www.gchagnon.fr/cours/dhtml/exercices/exo7cor.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Essai DHTML</title>
+
+<script type="text/javascript">
+<!--
+	
+	function change_enfants()
+		{
+			para=document.getElementById("truc");
+			
+			alert(para.childNodes.length);
+			
+			para.firstChild.nodeValue="On change le texte plein d'enfants ";
+			
+			para.lastChild.width="100";
+			para.lastChild.height="55";
+			
+			para.childNodes[1].innerHTML="<font color='blue'>en bleu<"+"/font>";
+			
+			para.childNodes[3].style.display="block";
+
+		}		
+	
+//-->
+</script>
+
+</head>
+<body cz-shortcut-listen="true">
+
+<p id="truc" onclick="change_enfants()">Un texte avec plein d'enfants, <b>en gras</b>, <i>en italique</i>... et une image <img alt="Un dauphin" src="./Essai DHTMLcorrection_files/dauphin3_1_.jpg" height="111" width="200"></p>
+
+<p><a href="http://www.gchagnon.fr/cours/dhtml/introdom.html#exoenfants">Retour au cours</a></p>
+
+
+
+</body></html>

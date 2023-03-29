@@ -1,1 +1,3 @@
-alert("C'est mon 1er script");
+alert("<h2>C'est mon premier script<h2>");
+
+document.write("<h2>C'est mon premier script<h2>");

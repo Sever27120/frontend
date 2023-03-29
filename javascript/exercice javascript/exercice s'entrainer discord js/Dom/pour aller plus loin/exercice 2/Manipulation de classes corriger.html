@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.gchagnon.fr/cours/dhtml/exercices/exo24cor.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Manipulation de classes</title>
+  
+  <style>
+	.classe1{font-weight: bold}
+	.classe2{color: green}
+	.classe3{font-style: italic}
+  </style>
+  <script>
+	function Init()
+		{
+			if (!document.getElementById) return;
+
+			para1=document.getElementById("p1");
+			para2=document.getElementById("p2");
+			para3=document.getElementById("p3");
+
+			if (!para1.addEventListener || !para2.addEventListener || !para3.addEventListener) return;
+
+			para1.addEventListener("click", change, false);
+			para2.addEventListener("click", change, false);
+			para3.addEventListener("click", change, false);
+		}
+
+	function change(event)
+		{
+			/*if (event.target.className.search("classe3")==-1) event.target.className+=" classe3";
+			event.target.className=event.target.className.trim();*/
+			
+			event.target.classList.add("classe3");
+			
+		}
+  </script>
+</head>
+<body onload="Init()" cz-shortcut-listen="true">
+
+<p id="p1" class="classe1 classe2">Texte avec deux classes dont il faut changer la mise en forme.</p>
+<p id="p2" class="classe3 classe2">Texte possédant déjà la classe classe3</p>
+<p id="p3">Texte sans classe.</p>
+
+
+
+</body></html>
