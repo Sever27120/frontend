@@ -1,14 +1,20 @@
 
+
 var somme=0;
 
 var moyenne=0;
 
 var nbentier=0;
 
+var i = 0;
+
+var tab=new Array();
 
  while(entier!=0){
 
     var entier=prompt("Saisir un entier");
+
+    tab.push(entier);
 
     somme+=parseInt(entier);
 
@@ -26,6 +32,8 @@ var nbentier=0;
 
 }
  }
- 
 
+
+
+ 
 
