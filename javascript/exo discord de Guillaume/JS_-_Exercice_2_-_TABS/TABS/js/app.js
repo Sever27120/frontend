@@ -15,3 +15,7 @@
     // récupérer le contenu courant grâce à l'id
 
     // ajouter .active au contenu courant
+
+    const about =document.querySelector(".about");
+
+    const 
