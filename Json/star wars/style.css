@@ -1,0 +1,31 @@
+* {
+    cursor: url(https://cdn.discordapp.com/attachments/1082384658114822294/1095254167586611230/Sw8.GIF), pointer;
+}
+
+body {
+    background-color: rgb(105, 105, 105);
+    color: white;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+
+
+}
+
+h2 {
+    color: yellow;
+    font-size: 2em;
+    background-color: black;
+    text-align: center;
+}
+
+.navbar-dark{
+    justify-content:center;
+}
+
+#liste{
+    display:flex;
+    flex-direction:column;
+    width: 30%;
+}
