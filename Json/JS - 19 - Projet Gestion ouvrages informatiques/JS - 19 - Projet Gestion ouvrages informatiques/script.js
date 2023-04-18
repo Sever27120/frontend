@@ -82,6 +82,7 @@ function createListe(_data) {
         option.innerText = categoriesList[b];
         document.getElementById("listCategories").appendChild(option);
     }
+
     showBooks(booksList);
 }
 // pour afficher les images
