@@ -1,57 +1,15 @@
-/*jQuery(document).ready(function ($) {
+
 	const srcImg = "images/"; // emplacement des images de l'appli
 	const albumDefaultMini = srcImg + "noComicsMini.jpeg";
 	const albumDefault = srcImg + "noComics.jpeg";
 	const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
 	const srcAlbum = "albums/"; // emplacement des images des albums en grand
+    var albumskey= albums.keys();
 
 
 
-	/*
-	console.log("Liste des albums");
-	albums.forEach(album => {
-	    serie = series.get(album.idSerie);
-	    auteur = auteurs.get(album.idAuteur);
-	    console.log(album.titre+" N°"+album.numero+" Série:"+serie.nom+" Auteur:"+auteur.nom);
-	});
-	*/
 
-	/*
-	console.log("Liste des albums par série");
-	for(var [idSerie, serie] of series.entries()) {
-	    // Recherche des albums de la série
-	    for (var [idAlbum, album] of albums.entries()) {
-	        if (album.idSerie == idSerie) {
-	            console.log(serie.nom+", Album N°"+album.numero+" "+album.titre+", Auteur:"+auteurs.get(album.idAuteur).nom);
-	        }
-	    }
-	    
-	}
-	*/
-
-	/*
-	console.log("Liste des albums par auteur");
-	for(var [idAuteur, auteur] of auteurs.entries()) {
-	    // Recherche des albums de l'auteur
-	    for (var [idAlbum, album] of albums.entries()) {
-	        if (album.idAuteur == idAuteur) {
-	            console.log(auteur.nom+", Album N°"+album.numero+" "+album.titre+", Série:"+series.get(album.idSerie).nom);
-	        }
-	    }
-	    
-	}
-	*/
-
-	// Affichage des BD
-	/*var txtSerie = document.getElementById("serie");
-	var txtNumero = document.getElementById("numero");
-	var txtTitre = document.getElementById("titre");
-	var txtAuteur = document.getElementById("auteur");
-	var txtPrix = document.getElementById("prix");
-	var imgAlbum = document.getElementById("album");
-	var imgAlbumMini = document.getElementById("albumMini");
-
-	imgAlbum.addEventListener("error", function () {
+	/*imgAlbum.addEventListener("error", function () {
 		prbImg(this)
 	});
 
@@ -64,32 +22,14 @@
 		getAlbum(this)
 	});
 
-
-	/**
-	 * Récupération de l'album par son id et appel de 
-	 * la fonction d'affichage
-	 * 
-	 * @param {number} num 
-	 */
-	/*function getAlbum(num) {
-
-		var album = albums.get(num.value);
-
-		if (album === undefined) {
-			txtSerie.value = "";
-			txtNumero.value = "";
-			txtTitre.value = "";
-			txtAuteur.value = "";
-			txtPrix.value = 0;
-
-			afficheAlbums($("#albumMini"), $("#album"), albumDefaultMini, albumDefault);
-
-		} else {
-
 			var serie = series.get(album.idSerie);
 			var auteur = auteurs.get(album.idAuteur);
 
-			txtSerie
+			txtSerie.value = serie.nom;
+			txtNumero.value = album.numero;
+			txtTitre.value = album.titre;
+			txtAuteur.value = auteur.nom;
+			txtPrix.value = album.prix;
 
 			var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
 
@@ -102,75 +42,117 @@
 				$("#album"),
 				srcAlbumMini + nomFic + ".jpg",
 				srcAlbum + nomFic + ".jpg"
-			);
+			);*/
 
+
+/*var nomimage = serie.nom + "-" + album.numero + "-" + album.titre;
+
+	var image =srcAlbumMini + nomimage;
+
+    srcAlbumMini.innerHTML ="<img src='" + image +  "'/>"+ "<br>" 
+	"<h1>" + "Titre:" +album.titre + " <br>" +"</h1>"
+	"<h2>" + "Prix:" + albumDefault.prix + "</h2>";*/
+
+
+
+
+	albums.forEach(album => {
+		serie = series.get(album.idSerie);
+		auteur = auteurs.get(album.idAuteur);
+
+		
+
+	var ListeBd=document.createElement("card");
+	ListeBd.setAttribute("class","horizontal card");
+	ListeBd.innerHTML =( "Titre:" + album.titre + "<br>  " +  "  " + album.prix + "€" + "<br>  "+ "Auteur:" + auteur.nom +"<br> " + "<img scr='"+ srcAlbumMini +"'/>" );
+	document.body.appendChild(ListeBd);
+
+	/*var btntitre = document.getElementById(rad1);
+
+	var btnauteur = document.getElementById(rad2);
+
+	var btnserie = document.getElementById(rad3);
+
+	function clique(liste) {
+		if(liste.target.btntitre == 'yes'){ 
+			box.style.backgroundColor = "red";
+	
+		}else if(e.target.id == 'no'){ // if user clicked the no button
+			box.style.backgroundColor = "green";
 		}
 	}
+	yes.addEventListener('click', colorChange);*/
+	
+	
+});	
 
-	/**
-	 * Affichage des images, les effets sont chainés et traités
-	 * en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
-	 * pour éviter l'accumulation d'effets si défilement rapide des albums.
-	 * 
-	 * @param {object jQuery} $albumMini 
-	 * @param {object jQuery} $album 
-	 * @param {string} nomFic 
-	 * @param {string} nomFicBig 
-	 */
-	/*function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
-		$album.stop(true, true).clearQueue().fadeOut(100, function () {
-			$album.attr('src', nomFic);
-			$albumMini.stop(true, true).clearQueue().fadeOut(150, function () {
-				$albumMini.attr('src', nomFicMini);
-				$albumMini.slideDown(200, function () {
-					$album.slideDown(200);
-				});
-			})
-		});
+	
+	
 
 
-	}
-
-	/**
-	 * Affichage de l'image par défaut si le chargement de l'image de l'album
-	 * ne s'est pas bien passé
-	 * 
-	 * @param {object HTML} element 
-	 */
-	/*function prbImg(element) {
-		// console.log(element);
-		if (element.id === "albumMini")
-			element.src = albumDefaultMini;
-		else element.src = albumDefault;
-
-	}
-
-});*/
 
 
-function showBd(_ListeBd){
-	document.getElementById("ListeBd").innerHTML="";
-	for (var i=0;i<_ListeBd.length;i++){
-		var ListeTable = document.createElement("div");
-		ListeTable.setAttribute("class","table-responsive");
-		if(_ListeTable[i].albums == undefined ||
-			_ListeTable[i].albums == null){
-				_ListeBd[i].scr="images/noComics.jpeg";
-			}
+	
+   /*console.log("Liste des albums par série");
+   for(var [idSerie, serie] of series.entries()) {
+	   // Recherche des albums de la série
+	   for (var [idAlbum, album] of albums.entries()) {
+		   if (album.idSerie == idSerie) {
+			   console.log(serie.nom+", Album N°"+album.numero+" "+album.titre+", Auteur:"+auteurs.get(album.idAuteur).nom);
+		   }
+	   }
+	   
+   }
+	
 
-	var titre;
+	
+   console.log("Liste des albums par auteur");
+   for(var [idAuteur, auteur] of auteurs.entries()) {
+	   // Recherche des albums de l'auteur
+	   for (var [idAlbum, album] of albums.entries()) {
+		   if (album.idAuteur == idAuteur) {
+			   console.log(auteur.nom+", Album N°"+album.numero+" "+album.titre+", Série:"+series.get(album.idSerie).nom);
+		   }
+	   }
+	   
+	
 
-	titre = _ListeBd[i].titre;
+	
+   /**
+	* Affichage des images, les effets sont chainés et traités
+	* en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
+	* pour éviter l'accumulation d'effets si défilement rapide des albums.
+	* 
+	* @param {object jQuery} $albumMini 
+	* @param {object jQuery} $album 
+	* @param {string} nomFic 
+	* @param {string} nomFicBig 
+	*/
+/*function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
+	$album.stop(true, true).clearQueue().fadeOut(100, function () {
+		$album.attr('src', nomFic);
+		$albumMini.stop(true, true).clearQueue().fadeOut(150, function () {
+			$albumMini.attr('src', nomFicMini);
+			$albumMini.slideDown(200, function () {
+				$album.slideDown(200);
+			});
+		})
+	});
 
-	var prix;
 
-	prix = _ListeBd[i].prix;
-
-	ListeCard.innerHTML= "<img src='" + _ListeBd[i].albums + "'/>" + 
-	"<h1>" + titre + "</h1>"+
-	"<h2>" + prix + "</h2>";
-	}
-	document.body.appendChild(ListeTable);
 }
 
-console.log(ListeCard);
+/**
+ * Affichage de l'image par défaut si le chargement de l'image de l'album
+ * ne s'est pas bien passé
+ * 
+ * @param {object HTML} element 
+ */
+/*function prbImg(element) {
+	// console.log(element);
+	if (element.id === "albumMini")
+		element.src = albumDefaultMini;
+	else element.src = albumDefault;
+
+}
+*/
