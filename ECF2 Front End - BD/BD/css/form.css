@@ -1,4 +1,11 @@
-form {
+
+
+
+body{
+    background-color:aquamarine;
+  }
+  
+#formulaire {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -75,4 +82,11 @@ label {
     color: #666;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: small;
+}
+
+
+.categorie
+{
+margin-right:1100px;
+
 }

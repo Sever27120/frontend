@@ -4,13 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/form.css">
-    <title>Inscription</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel ="stylesheet" href="../css/form.css">
+    <title>Inscription utilisateur</title>
 </head>
 <body>
-    <h1>Contactez-nous</h1>
+    <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #00b275;">
+        <div class="container-fluid">
 
-    <form method="post" action="/envoyer-mail.php" onsubmit="return validerFormulaire()">
+            <div class="collapse navbar-collapse show" id="navbarLight">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../BD.html">BD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./html/inscription.html">INSCRIPTION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./panier.html" >PANIER</a>
+                    </li>
+                </ul>
+                <form  class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+                    <div class="categorie">
+                        <input id="rad1" type="radio"  name="rad" value="premier"><label for="rad1">Titre</label>
+                        <input id="rad2" type="radio"  name="rad" value="deuxième"><label for="rad2">Auteur</label>
+                        <input id="rad3" type="radio"  name="rad" value="troisième"><label for="rad3">Serie</label>
+                    </div>
+                    
+                
+            </div>
+        </div>
+    </nav>
+    
+    
+    </nav>
+<div>
+    <h1>Inscription à notre site</h1>
+
+    <form id="formulaire" method="post" action="/envoyer-mail.php" onsubmit="return validerFormulaire()">
         <p>
             <label for="nom">Nom</label>
             <input type="text" id="societe" name="societe">
@@ -53,7 +87,7 @@
             <input type="reset" value="Effacer">
         </p>
     </form>
-
+</div>
 <script src="../js/form.js"></script>
 </body>
 </html>

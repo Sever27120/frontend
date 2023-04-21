@@ -1,7 +1,10 @@
+
+
 body {
   font: 1em sans-serif;
   padding: 0;
   margin: 0;
+  
 }
 
 form {
@@ -27,7 +30,7 @@ textarea,
 fieldset {
   /* requis pour composer de manière appropriée les éléments
      de formulaire sur les navigateurs fondés sur WebKit */
-  -webkit-appearance: none;
+  
 
   width: 100%;
   border: 1px solid #333;
@@ -50,5 +53,11 @@ input:focus:invalid {
 
 #erreur {
   color: red;
+}
+
+
+
+.horizontal.card{
+  background-color: aquamarine;
 }
 
