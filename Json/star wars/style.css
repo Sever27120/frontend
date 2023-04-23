@@ -1,0 +1,105 @@
+* {
+    cursor: url(https://cdn.discordapp.com/attachments/1082384658114822294/1095254167586611230/Sw8.GIF), pointer;
+}
+
+body {
+    background-color: rgb(105, 105, 105);
+    color: white;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+
+
+}
+
+h2 {
+    color: yellow;
+    font-size: 2em;
+    background-color: black;
+    text-align: center;
+}
+
+.navbar-dark{
+    justify-content:center;
+}
+
+#liste{
+    display:flex;
+    flex-direction:column;
+    width: 30%;
+}
+
+img{
+    width: 40%;
+}
+
+/*.loader{chargement de la page mais ne s'arrête pas 
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lettre{
+    color:#484848;
+    font-size:80px;
+    letter-spacing:15px;
+    margin-bottom:150px;
+    animation:flash 1.2s linear infinite;
+}
+/* afficher comme néo sur le chargement qui clignone en turquoise*/
+/*@keyframes flash{
+    0%{
+        color:aqua;
+        tex-shadow: 0 0 7px aqua;
+    }
+    90%{
+        color:#484848;
+        text-shadow: none;
+    }
+    100%{
+        color:aqua;
+        text-shadow: 0 0 7px aqua;
+    }
+}
+
+/*afficher comme un chargement qui passe sut toutes les lettres pour montrer un chargement de la page*/
+/*.lettre:nth-child(1){
+    animation-delay:0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay:0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay:0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay:0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay:0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay:0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay:0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay:0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay:0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay:1s;
+}
+.fondu-out{
+    opacity:0;
+    transition:opacity 0.4s ease-out;
+}*/
