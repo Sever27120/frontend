@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bd à commander</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #00b275;">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse show" id="navbarLight">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="BD.html">BD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./html/inscription.html">INSCRIPTION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./html/panier.html">PANIER</a>
+                    </li>
+                </ul>
+                <!-- barre de recherche -->
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="recherche" class="btn btn-outline-primary" type="submit">Search</button>
+                <!-- recherche par titre,auteur et série en cliquant de dessus relier avec la barre de recherche-->
+                </form>
+            <div class="categorie">
+                <input id="titre" type="radio" name="rad" value="premier"><label for="rad1">Titre</label>
+                <input id="auteur" type="radio" name="rad" value="deuxième"><label for="rad2">Auteur</label>
+                <input id="serie" type="radio" name="rad" value="troisième"><label for="rad3">Serie</label>
+            </div> 
+            </div>
+        </div>
+    </nav>
+<!--recherche Bd-->
+    <div id="affichebd" class="container-fluid"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="data/albums.js"></script>
+    <script src="data/series.js"></script>
+    <script src="data/auteurs.js"></script>
+    <script src="js/modeleBD.js"></script>
+
+</body>
+
+</html>
