@@ -19,3 +19,9 @@ select e.numcom,sum(qtecde* priuni) as prixht,sum(qtecde* priuni) *1.20 as prixt
 join ligcom as l on e.numcom=l.numcom
 
 where year(datcom)=2018
+
+
+SELECT DISTINCT(f.nomfou),v.delliv,p.codart,p.libart DATEDIFF(derliv,datcom) 
+FROM vente AS v JOIN fournis AS f ON v.numfou=f.numfou JOIN produit AS p ON p.codart=v.codart JOIN entcom AS e ON e.numfou=f.numfou JOIN ligcom AS l ON l.numcom=e.numcom 
+WHERE p.stkphy<=p.stkale*1.5 and DATEDIFF(derliv,datcom) <=30;
+
