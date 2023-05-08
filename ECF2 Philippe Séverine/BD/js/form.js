@@ -49,7 +49,7 @@ function validerFormulaire() {
         return false;
     }
     if (!checkEmail(confirmermotdepasse)) {
-        alert(" Veuillez entrer le moty de passe identique à celui du dessus");
+        alert(" Veuillez entrer le mot de passe identique à celui du dessus");
         return false;
     }
 

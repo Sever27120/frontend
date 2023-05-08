@@ -9,13 +9,17 @@
 .container-fluid{
 width: 50%;
 font-size: 20px;
+
+
 }
 
 .calculateur{
  margin-top: 50px;
   padding:2px;
 border-radius: 10px;
-text-align: center;  
+text-align: center;
+
+
 
 }
 
@@ -36,5 +40,3 @@ button.hover{
 #final{
     font-size:20px;
 }
-
-
